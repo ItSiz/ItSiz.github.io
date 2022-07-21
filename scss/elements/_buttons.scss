@@ -1,0 +1,58 @@
+.btn {
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    padding: 16px 65px;
+    border-radius: $button-radius;
+    border: none;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &--primary {
+      background-color: $color-primary;
+      border-radius: $button-radius;
+      box-shadow: 3px 10px 14px $color-primary-shadow;
+
+      &:hover {
+        box-shadow: 0px 0px 5px 5px $color-secondary-primary;
+      }
+    }
+  
+    &--basic {
+      &:hover {
+        box-shadow: 0px 0px 5px 5px $color-secondary-redish;
+      }
+    }
+
+    &--redish {
+      background-color: $color-redish;
+    }
+  
+    &--premium {
+      &:hover { 
+        box-shadow: 0px 0px 5px 5px $color-secondary-green;
+      }
+    }
+
+    &--green {
+      background-color: $color-green;
+    }
+  
+    &--large {
+      padding: 22px 155px;
+    }
+
+    &_send {
+      background: $color-primary-shadow;
+      color: $color-primary;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+
+      &:hover {
+      box-shadow: 0px 15px 15px $color-primary-shadow;
+      }
+    }
+}
+  
