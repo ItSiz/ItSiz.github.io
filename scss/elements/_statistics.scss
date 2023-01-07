@@ -39,6 +39,11 @@
         .statistics__img {
           top: 0;
           left: 45%;
+
+          &:hover {
+            -webkit-animation: person_jump 1s infinite linear;
+            animation: person_jump 1s infinite linear;
+          }
         }
       }
   
@@ -50,6 +55,11 @@
         .statistics__img {
           top: 14px;
           left: 47%;
+
+          &:hover {
+            -webkit-animation: eye_look 2s ease infinite;
+            animation: eye_look 2s ease infinite;
+          }
         }
 
       }
@@ -63,6 +73,11 @@
         .statistics__img {
           top: 6px;
           left: 50%;
+
+          &:hover {
+            -webkit-animation: sheet_up 1.6s infinite ease;
+            animation: sheet_up 1.6s infinite ease;
+          }
         }
       }
 
@@ -85,7 +100,15 @@
   
     &__img {
       position: absolute;
-      animation: loading1 5s 0s infinite ease;
+      // animation: loading1 0.6s 0s infinite linear;
+      -webkit-animation: loading1 3s 0s infinite linear;
+      animation: loading1 3s 0s infinite linear;
+
+      &:nth-of-type(1):hover {
+        -webkit-animation: sheet_up 1.6s infinite ease;
+                animation: sheet_up 1.6s infinite ease;
+      }
+
     }
   
     &__number {
@@ -103,11 +126,129 @@
   
 
   @keyframes loading1 {
-    50% {
+    100% {
       transform: rotate(1turn);
     }
+  }
 
+  @-webkit-keyframes loading1 {
+    0% {
+      transform: translateX(0%);
+    }
     50% {
-      transform: rotate(1turn);
+      transform: translateX(18%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes loading1 {
+    0% {
+      transform: translateX(0%);
+    }
+    50% {
+      transform: translateX(18%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  @-webkit-keyframes person_jump {
+    20% {
+      transform: rotate(-6deg) scaleY(1.05);
+    }
+    35% {
+      transform: rotate(6deg) scaleY(1);
+    }
+    50% {
+      transform: rotate(-2deg);
+    }
+    65% {
+      transform: rotate(2deg);
+    }
+    80% {
+      transform: rotate(-1deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes person_jump {
+    20% {
+      transform: rotate(-6deg) scaleY(1.05);
+    }
+    35% {
+      transform: rotate(6deg) scaleY(1);
+    }
+    50% {
+      transform: rotate(-2deg);
+    }
+    65% {
+      transform: rotate(2deg);
+    }
+    80% {
+      transform: rotate(-1deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  @-webkit-keyframes sheet_up {
+    60% {
+      transform: translateY(-60%) scaleY(1.1);
+    }
+    70% {
+      transform: translateY(0%) scaleY(0.95) scaleX(1.05);
+    }
+    80% {
+      transform: translateY(0%) scaleY(1.05) scaleX(1);
+    }
+    90% {
+      transform: translateY(0%) scaleY(0.95) scaleX(1);
+    }
+    100% {
+      transform: translateY(0%) scaleY(1) scaleX(1);
+    }
+  }
+  @keyframes sheet_up {
+    60% {
+      transform: translateY(-60%) scaleY(1.1);
+    }
+    70% {
+      transform: translateY(0%) scaleY(0.95) scaleX(1.05);
+    }
+    80% {
+      transform: translateY(0%) scaleY(1.05) scaleX(1);
+    }
+    90% {
+      transform: translateY(0%) scaleY(0.95) scaleX(1);
+    }
+    100% {
+      transform: translateY(0%) scaleY(1) scaleX(1);
+    }
+  }
+  @-webkit-keyframes eye_look {
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes eye_look {
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
     }
   }
